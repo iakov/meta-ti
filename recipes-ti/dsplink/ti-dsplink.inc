@@ -150,7 +150,7 @@ do_compile() {
       all
 }
 
-KERNEL_VERSION = "${@base_read_file('${STAGING_KERNEL_DIR}/kernel-abiversion')}"
+KERNEL_VERSION = "${@oe.utils.read_file('${STAGING_KERNEL_DIR}/kernel-abiversion')}"
 
 do_install () {
 	

@@ -181,7 +181,7 @@ do_compile() {
 	 `${XDC_INSTALL_DIR}/bin/xdcpkg ${SYSLINK_ROOT}/ti/syslink | grep samples`
 }
 
-KERNEL_VERSION = "${@base_read_file('${STAGING_KERNEL_DIR}/kernel-abiversion')}"
+KERNEL_VERSION = "${@oe.utils.read_file('${STAGING_KERNEL_DIR}/kernel-abiversion')}"
 
 do_install () {
 
